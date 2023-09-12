@@ -47,6 +47,9 @@ const reducer = (state, action) => {
     }
 
     case "TOTAL_BY_RACES": {
+      // Validate if payload is less or equal the current number of races
+      // if will go here
+
       const newList = state.drivers.map((driver) => {
         let newTotal = sumValues(driver.scores, payload);
         return { ...driver, total: newTotal };
