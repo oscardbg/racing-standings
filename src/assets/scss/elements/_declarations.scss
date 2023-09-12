@@ -1,0 +1,22 @@
+// Variables
+$dark-1: #0d1117;
+$dark-2: #24292f;
+$gray-light: #dfe7ec;
+$primary: #bb86fc;
+$secondary: #03dac5;
+
+// Buttons
+.btn {
+  outline: none;
+  border: 1px solid rgba($primary, 0.6);
+  background-color: $dark-1;
+  color: #eee;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+  &:hover {
+    color: $primary;
+    border-color: $primary;
+  }
+}

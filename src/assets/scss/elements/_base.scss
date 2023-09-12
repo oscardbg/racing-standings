@@ -1,0 +1,73 @@
+// Imports
+@use "declarations" as *;
+
+// Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: ubuntu, sans-serif;
+}
+body {
+  background-color: $dark-1;
+  color: #eee;
+}
+
+// Container
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+// Filter buttons
+.btns {
+  margin-top: 60px;
+  button {
+    margin-right: 20px;
+    padding: 5px 15px;
+  }
+}
+
+// Driver List
+.driver-list {
+  margin-top: 60px;
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 1px solid rgba(#fff, 0.2);
+    padding: 5px;
+    border-radius: 3px;
+    gap: 20px;
+    &:first-child {
+      font-weight: bold;
+      text-transform: uppercase;
+      span {
+        border: 1px solid rgba(#fff, 0.2);
+        padding: 5px;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+    h3 {
+      width: 120px;
+      font-weight: normal;
+    }
+    .scores {
+      display: flex;
+      gap: 5px;
+    }
+    span {
+      width: 50px;
+      display: block;
+      text-align: right;
+      &:first-child {
+        color: $primary;
+        font-weight: bold;
+      }
+    }
+  }
+}
