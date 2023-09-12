@@ -1,5 +1,7 @@
 import { useGlobalContext } from "../context";
 
+import { locations } from "../data/f1Data";
+
 const F1Drivers = () => {
   const { num, races, drivers, totalByRaces } = useGlobalContext();
 
@@ -10,9 +12,9 @@ const F1Drivers = () => {
           <p>Names</p>
           <div className="scores">
             <span>Total</span>
-            {[...Array(races)].map((_, i) => (
-              <span key={i} onClick={() => totalByRaces(i + 1)}>
-                {i + 1}
+            {locations.map((loc, i) => (
+              <span key={loc.id} onClick={() => totalByRaces(i + 1)}>
+                {loc.flag}
               </span>
             ))}
           </div>
