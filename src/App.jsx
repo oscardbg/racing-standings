@@ -25,7 +25,7 @@ const App = () => {
 };
 
 const DriversList = () => {
-  const { num, drivers, totalByRaces } = useGlobalContext();
+  const { num, races, drivers, totalByRaces } = useGlobalContext();
 
   return (
     <>
@@ -34,7 +34,7 @@ const DriversList = () => {
           <h3>Names</h3>
           <div className="scores">
             <span>Total</span>
-            {[...Array(10)].map((_, i) => (
+            {[...Array(races)].map((_, i) => (
               <span key={i} onClick={() => totalByRaces(i + 1)}>
                 {i + 1}
               </span>

@@ -5,7 +5,7 @@ import { testDrivers } from "./data/f1Data";
 
 const AppContext = createContext();
 
-const initialState = { num: 0, drivers: testDrivers };
+const initialState = { num: 0, drivers: testDrivers, races: testDrivers[0].scores.length };
 
 const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);

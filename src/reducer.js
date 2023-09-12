@@ -1,9 +1,13 @@
-const totalUtil = (items) => {
-  return items.reduce((acc, item) => acc + item, 0);
-};
-
 const mySort = (items) => {
   items.sort((a, b) => b.total - a.total);
+};
+
+const sumValues = (elems, max) => {
+  let newTotal = 0;
+  for (let i = 0; i < max; i++) {
+    newTotal += elems[i];
+  }
+  return newTotal;
 };
 
 const reducer = (state, action) => {
@@ -13,7 +17,7 @@ const reducer = (state, action) => {
     case "ALL_RACES": {
       const newList = state.drivers
         .map((driver) => {
-          const newTotal = totalUtil(driver.scores);
+          const newTotal = sumValues(driver.scores, driver.scores.length);
           return { ...driver, total: newTotal };
         })
         .sort((a, b) => b.total - a.total);
@@ -22,10 +26,7 @@ const reducer = (state, action) => {
     case "PREV_RACE": {
       if (state.num > 0) {
         const newList = state.drivers.map((driver) => {
-          let newTotal = 0;
-          for (let i = 0; i < state.num - 1; i++) {
-            newTotal += driver.scores[i];
-          }
+          let newTotal = sumValues(driver.scores, state.num - 1);
           return { ...driver, total: newTotal };
         });
         mySort(newList);
@@ -36,10 +37,7 @@ const reducer = (state, action) => {
     case "NEXT_RACE": {
       if (state.num < 10) {
         const newList = state.drivers.map((driver) => {
-          let newTotal = 0;
-          for (let i = 0; i < state.num + 1; i++) {
-            newTotal += driver.scores[i];
-          }
+          let newTotal = sumValues(driver.scores, state.num + 1);
           return { ...driver, total: newTotal };
         });
         mySort(newList);
@@ -50,10 +48,7 @@ const reducer = (state, action) => {
 
     case "TOTAL_BY_RACES": {
       const newList = state.drivers.map((driver) => {
-        let newTotal = 0;
-        for (let i = 0; i < payload; i++) {
-          newTotal += driver.scores[i];
-        }
+        let newTotal = sumValues(driver.scores, payload);
         return { ...driver, total: newTotal };
       });
       mySort(newList);
