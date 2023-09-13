@@ -1,31 +1,29 @@
 import { useGlobalContext } from "../context";
 
-import { f1locations } from "../data/f1Data";
-
-const F1Drivers = () => {
-  const { num, drivers, totalByRaces } = useGlobalContext();
+const Standings = ({ people, locations }) => {
+  const { motonum } = useGlobalContext();
 
   return (
     <>
       <ul className="driver-list">
-        <li>
+        <li className="first-row">
           <p>Names</p>
           <div className="scores">
             <span>Total</span>
-            {f1locations.map((loc, i) => (
+            {locations.map((loc, i) => (
               <span key={loc.id} onClick={() => totalByRaces(i + 1)} title={loc.race + "\n" + loc.date}>
                 {loc.flag}
               </span>
             ))}
           </div>
         </li>
-        {drivers.map((driver) => (
-          <li key={driver.id}>
-            <p>{driver.name}</p>
+        {people.map((person) => (
+          <li key={person.id}>
+            <p>{person.name}</p>
             <div className="scores">
-              <span>{driver.total}</span>
-              {[...Array(num)].map((_, i) => (
-                <span key={i}>{driver.scores[i]}</span>
+              <span>{person.total}</span>
+              {[...Array(motonum)].map((_, i) => (
+                <span key={i}>{person.scores[i]}</span>
               ))}
             </div>
           </li>
@@ -35,4 +33,4 @@ const F1Drivers = () => {
   );
 };
 
-export default F1Drivers;
+export default Standings;

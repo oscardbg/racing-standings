@@ -2,10 +2,17 @@ import { createContext, useContext, useReducer } from "react";
 
 import reducer from "./reducer";
 import { driversData } from "./data/f1Data";
+import { ridersData } from "./data/motoData";
 
 const AppContext = createContext();
 
-const initialState = { num: 0, drivers: driversData, races: driversData[0].scores.length };
+const initialState = {
+  f1num: 0,
+  motonum: 0,
+  drivers: driversData,
+  riders: ridersData,
+  f1races: driversData[0].scores.length,
+};
 
 const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);

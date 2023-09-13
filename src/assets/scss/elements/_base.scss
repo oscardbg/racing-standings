@@ -72,7 +72,7 @@ nav {
 
 // Driver List
 .driver-list {
-  margin-top: 20px;
+  margin: 20px auto 80px;
   border: 1px solid rgba(#fff, 0.2);
   border-radius: 5px;
   overflow-x: auto;
@@ -111,9 +111,11 @@ nav {
     p {
       width: 170px;
       flex-shrink: 0;
+      text-transform: capitalize;
       // font-weight: normal;
     }
     .scores {
+      flex-grow: 1;
       flex-shrink: 0;
       display: flex;
       // gap: 5px;
