@@ -13,7 +13,7 @@ const F1Drivers = () => {
           <div className="scores">
             <span>Total</span>
             {locations.map((loc, i) => (
-              <span key={loc.id} onClick={() => totalByRaces(i + 1)}>
+              <span key={loc.id} onClick={() => totalByRaces(i + 1)} title={loc.race + "\n" + loc.date}>
                 {loc.flag}
               </span>
             ))}

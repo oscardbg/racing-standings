@@ -1,78 +1,3 @@
-const circuits = [];
-
-const f1Drivers = [
-  {
-    driver: "alex albon",
-    team: "williams racing",
-    number: 23,
-    country: "thailand",
-    scores: [10, 0, 0, 12, 14, 14, 16, 7, 11, 8, 11, 14, 8, 7],
-  },
-];
-
-const testDrivers = [
-  {
-    id: "bf376d37-cbc8-4955-b48c-3eff03d8ccd8",
-    name: "Driver 00",
-    scores: [0, 9, 13, 14, 15, 10, 6, 6, 10, 7],
-    total: 0,
-  },
-  {
-    id: "5b917a21-05e4-4508-a902-3e66f4b62930",
-    name: "Driver 01",
-    scores: [1, 3, 0, 6, 15, 12, 13, 4, 15, 13],
-    total: 0,
-  },
-  {
-    id: "ccfd2c17-c062-44ca-aecf-f0a1212f32ca",
-    name: "Driver 02",
-    scores: [11, 12, 12, 12, 15, 10, 5, 12, 6, 9],
-    total: 0,
-  },
-  {
-    id: "ef272476-f3ec-4321-8b60-98b63e26c271",
-    name: "Driver 03",
-    scores: [6, 2, 4, 7, 14, 12, 6, 3, 7, 6],
-    total: 0,
-  },
-  {
-    id: "d2154db6-5a0b-4473-80cb-2e425464ccba",
-    name: "Driver 04",
-    scores: [5, 6, 7, 5, 8, 1, 15, 1, 14, 3],
-    total: 0,
-  },
-  {
-    id: "44a02319-c4fb-4a45-9dae-373c466fb531",
-    name: "Driver 05",
-    scores: [11, 14, 11, 3, 14, 8, 11, 4, 9, 0],
-    total: 0,
-  },
-  {
-    id: "9d09212e-b536-4311-a9ba-36e16820018c",
-    name: "Driver 06",
-    scores: [6, 5, 0, 14, 4, 7, 8, 3, 8, 12],
-    total: 0,
-  },
-  {
-    id: "c2305174-4fe5-4c69-ac07-5a489cb1f531",
-    name: "Driver 07",
-    scores: [10, 0, 7, 1, 15, 14, 5, 7, 8, 11],
-    total: 0,
-  },
-  {
-    id: "906789c0-213e-4186-9be3-aacdedbfe068",
-    name: "Driver 08",
-    scores: [2, 10, 11, 10, 9, 1, 5, 7, 4, 2],
-    total: 0,
-  },
-  {
-    id: "e8efb81a-7f53-4670-ab9f-74faadd5a372",
-    name: "Driver 09",
-    scores: [4, 15, 0, 4, 11, 15, 8, 3, 1, 0],
-    total: 0,
-  },
-];
-
 const locations = [
   {
     date: "5 March",
@@ -252,4 +177,139 @@ const locations = [
   },
 ];
 
-export { testDrivers, locations };
+const driversData = [
+  {
+    id: "f670fd68-6708-40da-9a1b-326bfebfee2c",
+    name: "ALEX ALBON",
+    scores: [1, 0, 0, 0, 0, 0, 0, 6, 0, 4, 0, 0, 4, 6],
+    total: 0,
+  },
+  {
+    id: "5b9de44e-f4a8-4f02-b426-ce5640b87b1e",
+    name: "CARLOS SAINZ",
+    scores: [12, 8, 0, 14, 10, 4, 10, 10, 14, 1, 4, 5, 10, 15],
+    total: 0,
+  },
+  {
+    id: "2e537761-98ca-4018-be62-64d594400d44",
+    name: "CHARLES LECLERC",
+    scores: [0, 6, 0, 22, 6, 8, 0, 12, 18, 2, 6, 19, 0, 12],
+    total: 0,
+  },
+  {
+    id: "30155fc7-2471-4382-83cd-e45f8465bd79",
+    name: "DANIEL RICCIARDO",
+    scores: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    total: 0,
+  },
+  {
+    id: "19c4fcf7-bccf-4dce-bd95-21136af94f73",
+    name: "ESTEBAN OCON",
+    scores: [0, 4, 0, 0, 2, 15, 4, 4, 2, 0, 0, 4, 1, 0],
+    total: 0,
+  },
+  {
+    id: "353dcf6f-e9c0-492b-ab7b-7cec98eb788e",
+    name: "FERNANDO ALONSO",
+    scores: [15, 15, 15, 15, 15, 18, 6, 18, 14, 6, 2, 10, 19, 2],
+    total: 0,
+  },
+  {
+    id: "cd1cb753-4ae3-44e6-8bb7-f596e92d21df",
+    name: "GEORGE RUSSELL",
+    scores: [6, 12, 0, 10, 12, 10, 15, 0, 7, 10, 8, 9, 0, 10],
+    total: 0,
+  },
+  {
+    id: "5259392b-15af-443f-a230-badbe4ba16a6",
+    name: "KEVIN MAGNUSSEN",
+    scores: [0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    total: 0,
+  },
+  {
+    id: "098d26e1-95f2-43e0-8b94-f697d620c528",
+    name: "LANCE STROLL",
+    scores: [8, 0, 12, 7, 0, 0, 8, 2, 7, 0, 1, 2, 0, 0],
+    total: 0,
+  },
+  {
+    id: "62676e29-2aeb-43e5-8157-647a76a3d7d7",
+    name: "LANDO NORRIS",
+    scores: [0, 0, 8, 2, 0, 2, 0, 0, 12, 18, 18, 9, 6, 0],
+    total: 0,
+  },
+  {
+    id: "e8e93927-e8b8-4015-a25c-7b5bc514cc54",
+    name: "LEWIS HAMILTON",
+    scores: [10, 10, 18, 10, 8, 13, 18, 15, 4, 15, 12, 15, 8, 8],
+    total: 0,
+  },
+  {
+    id: "53bc039e-2ace-404d-a4b4-74193d298e34",
+    name: "LIAM LAWSON",
+    scores: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    total: 0,
+  },
+  {
+    id: "cae33783-da9d-4dc1-915b-b5fceb743a39",
+    name: "LOGAN SARGEANT",
+    scores: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    total: 0,
+  },
+  {
+    id: "e76d8bb6-e2e2-4127-bd26-c81ba4685688",
+    name: "MAX VERSTAPPEN",
+    scores: [25, 19, 25, 24, 26, 25, 26, 25, 34, 26, 26, 33, 25, 25],
+    total: 0,
+  },
+  {
+    id: "27440ab8-03a7-44a1-b931-3fd9959b1905",
+    name: "NICK DE VRIES",
+    scores: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    total: 0,
+  },
+  {
+    id: "51662b06-d1f5-416e-b54d-afde639edc08",
+    name: "NIKO HULKENBERG",
+    scores: [0, 0, 6, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0],
+    total: 0,
+  },
+  {
+    id: "589107c3-733d-4315-be44-28474f7a35f4",
+    name: "OSCAR PIASTRI",
+    scores: [0, 0, 4, 0, 0, 1, 0, 0, 0, 12, 10, 7, 2, 0],
+    total: 0,
+  },
+  {
+    id: "18857be1-c7ce-4b06-85ee-3e93fe704163",
+    name: "PIERRE GASLY",
+    scores: [2, 2, 0, 0, 4, 6, 1, 0, 1, 0, 0, 6, 15, 0],
+    total: 0,
+  },
+  {
+    id: "47bed96f-d18e-49f8-a168-b00d037c0d53",
+    name: "SERGIO PEREZ",
+    scores: [18, 25, 11, 33, 18, 0, 12, 9, 22, 8, 15, 18, 12, 18],
+    total: 0,
+  },
+  {
+    id: "e190a2c0-84d0-4ad7-91b5-3fba09830be2",
+    name: "VALTERI BOTTAS",
+    scores: [4, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1],
+    total: 0,
+  },
+  {
+    id: "2aa4cd2d-ccc0-4d79-803a-3d6cd96f4ad2",
+    name: "YUKI TSUNODA",
+    scores: [0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+    total: 0,
+  },
+  {
+    id: "0590b0b7-f65c-4fa7-b360-12040cb51d36",
+    name: "ZHOU GUANYU",
+    scores: [0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0],
+    total: 0,
+  },
+];
+
+export { driversData, locations };

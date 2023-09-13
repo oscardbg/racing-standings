@@ -3,18 +3,22 @@ import { useGlobalContext } from "../context";
 import F1Drivers from "../components/F1Drivers";
 
 const Formula1 = () => {
-  const { allRaces, prevRaceTotal, nextRaceTotal } = useGlobalContext();
+  const { num, drivers, allRaces, prevRaceTotal, nextRaceTotal } = useGlobalContext();
 
   return (
     <>
+      <h2>Formula 1 2023 Standings</h2>
       <div className="btns">
         <button className="btn flt" onClick={allRaces}>
           All Races
         </button>
-        <button className="btn flt" onClick={prevRaceTotal}>
+        <button className={`${num <= 0 ? "btn disabled" : "btn"}`} onClick={prevRaceTotal}>
           Previous Race
         </button>
-        <button className="btn flt" onClick={nextRaceTotal}>
+        <button
+          className={`${num < drivers[0].scores.length ? "btn" : "btn disabled"}`}
+          onClick={nextRaceTotal}
+        >
           Next Race
         </button>
       </div>
