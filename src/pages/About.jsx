@@ -1,12 +1,17 @@
 const About = () => {
   return (
     <>
-      <h2>About</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, ducimus. Facilis eius maiores a
-        sequi facere voluptates ipsa eveniet quod iusto odit nulla, quo est, laboriosam deserunt excepturi
-        mollitia voluptatem, id explicabo pariatur fugit consequatur veniam tenetur harum! Tempore, omnis.
-      </p>
+      <section className="main">
+        <h2>About</h2>
+        <p>
+          Author: Oscar Pastrano <br />
+          2023
+        </p>
+        <p>
+          This site was developed with React 18.2 using useContext and useReducer hooks. The data of F1 and
+          MotoGP was saved on a static file and loaded to each page.
+        </p>
+      </section>
     </>
   );
 };

@@ -55,6 +55,66 @@ nav {
   }
 }
 
+// Home Page
+.main {
+  article {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    a {
+      border: 1px solid rgba(#fff, 0.2);
+      flex-grow: 1;
+      background-color: #222;
+      border-radius: 5px;
+      padding: 20px;
+      &:first-child {
+        img {
+          width: 80%;
+        }
+      }
+      &:hover {
+        border-color: #eee;
+        background-color: #333;
+      }
+    }
+    p {
+      text-align: center;
+      font-weight: bold;
+      color: #eee;
+      padding-top: 20px;
+      font-size: 1.5rem;
+    }
+  }
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
+  & > p {
+    width: 60%;
+    margin: 20px auto 0;
+    padding: 15px;
+    background-color: #191919;
+    border: 1px solid rgba(#fff, 0.2);
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+  }
+  ul {
+    background-color: #191919;
+    width: 60%;
+    margin: 20px auto 0;
+    padding: 20px 20px 0;
+    border: 1px solid rgba(#fff, 0.2);
+    li {
+      margin-bottom: 20px;
+    }
+  }
+}
+
 // Filter buttons
 .btns {
   margin-top: 20px;
@@ -67,74 +127,5 @@ nav {
     color: #888;
     user-select: none;
     pointer-events: none;
-  }
-}
-
-// Driver List
-.driver-list {
-  margin: 20px auto 80px;
-  border: 1px solid rgba(#fff, 0.2);
-  border-radius: 5px;
-  overflow-x: auto;
-  padding-bottom: 10px;
-
-  // List Row
-  li {
-    display: flex;
-    align-items: center;
-    padding: 5px;
-    border-radius: 3px;
-
-    &:first-child {
-      background-color: #333;
-      margin-bottom: 10px;
-      padding: 0 5px;
-      p {
-        text-transform: uppercase;
-        font-weight: bold;
-      }
-      span {
-        // border: 1px solid rgba(#fff, 0.2);
-        padding: 0;
-        font-weight: bold;
-        // text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-
-        &:not(:first-child) {
-          font-size: 1.8rem;
-        }
-      }
-    }
-    p {
-      width: 170px;
-      flex-shrink: 0;
-      text-transform: capitalize;
-      // font-weight: normal;
-    }
-    .scores {
-      flex-grow: 1;
-      flex-shrink: 0;
-      display: flex;
-      // gap: 5px;
-    }
-    span {
-      width: 50px;
-      display: block;
-      font-size: 0.9rem;
-      padding-right: 15px;
-      text-align: right;
-      padding-left: 10px;
-      &:first-child {
-        color: $primary;
-        font-weight: bold;
-      }
-    }
-
-    &:hover {
-      background-color: #333;
-    }
   }
 }
