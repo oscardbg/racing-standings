@@ -17,20 +17,20 @@ const initialState = {
 const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  function allRaces() {
-    dispatch({ type: "ALL_RACES" });
+  function allRaces(sport) {
+    dispatch({ type: "ALL_RACES", payload: { sport } });
   }
 
-  function nextRaceTotal() {
-    dispatch({ type: "NEXT_RACE" });
+  function nextRaceTotal(sport) {
+    dispatch({ type: "NEXT_RACE", payload: { sport } });
   }
 
-  function prevRaceTotal() {
-    dispatch({ type: "PREV_RACE" });
+  function prevRaceTotal(sport) {
+    dispatch({ type: "PREV_RACE", payload: { sport } });
   }
 
-  function totalByRaces(raceNum) {
-    dispatch({ type: "TOTAL_BY_RACES", payload: raceNum });
+  function totalByRaces(raceNum, sport) {
+    dispatch({ type: "TOTAL_BY_RACES", payload: { raceNum, sport } });
   }
 
   return (

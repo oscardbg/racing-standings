@@ -1,7 +1,7 @@
 import { useGlobalContext } from "../context";
 
-const Standings = ({ people, locations }) => {
-  const { motonum } = useGlobalContext();
+const Standings = ({ num, people, locations, type }) => {
+  const { totalByRaces } = useGlobalContext();
 
   return (
     <>
@@ -11,7 +11,7 @@ const Standings = ({ people, locations }) => {
           <div className="scores">
             <span>Total</span>
             {locations.map((loc, i) => (
-              <span key={loc.id} onClick={() => totalByRaces(i + 1)} title={loc.race + "\n" + loc.date}>
+              <span key={loc.id} onClick={() => totalByRaces(i + 1, type)} title={loc.race + "\n" + loc.date}>
                 {loc.flag}
               </span>
             ))}
@@ -22,7 +22,7 @@ const Standings = ({ people, locations }) => {
             <p>{person.name}</p>
             <div className="scores">
               <span>{person.total}</span>
-              {[...Array(motonum)].map((_, i) => (
+              {[...Array(num)].map((_, i) => (
                 <span key={i}>{person.scores[i]}</span>
               ))}
             </div>
