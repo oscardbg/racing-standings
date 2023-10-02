@@ -6,9 +6,19 @@ React project to show the standing results of Formula 1 and MotoGP 2023 Champion
 
 ## Netlify Deploy
 
-[Racing Standings](https://nospoilers-racing-ed04ff.netlify.app)
+v1.0: [Racing Standings v1.0](https://nospoilers-racing-ed04ff.netlify.app)
 
 https://nospoilers-racing-ed04ff.netlify.app
+
+v1.1: [Racing Standings v1.1] (https://nospoilers-racing-4f1278.netlify.app)
+
+https://nospoilers-racing-4f1278.netlify.app
+
+Changes:
+
+- Results until october 1, 2023 added
+- Flags using images instead of emojis, for better compatibility
+- Some css changes
 
 ## Features
 
